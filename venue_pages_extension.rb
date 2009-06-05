@@ -2,9 +2,9 @@
 # require_dependency 'application'
 
 class VenuePagesExtension < Radiant::Extension
-  version "1.0"
-  description "Describe your extension here"
-  url "http://yourwebsite.com/venue_pages"
+  version "0.1"
+  description "Add extra fields to the Page model, making it easy to create pages for venues."
+  url "http://wiki.github.com/nelstrom/radiant-venue_pages-extension"
   
   # define_routes do |map|
   #   map.namespace :admin, :member => { :remove => :get } do |admin|
@@ -13,11 +13,10 @@ class VenuePagesExtension < Radiant::Extension
   # end
   
   def activate
-    # admin.tabs.add "Venue Pages", "/admin/venue_pages", :after => "Layouts", :visibility => [:all]
+    admin.page.edit.add :form, "venue_page_fields", :before => "form_bottom"
   end
   
   def deactivate
-    # admin.tabs.remove "Venue Pages"
   end
   
 end
