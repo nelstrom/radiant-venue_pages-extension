@@ -13,6 +13,8 @@ class VenuePagesExtension < Radiant::Extension
   # end
   
   def activate
+    VenuePage
+    Page.send :include, PageExtensions
     admin.page.edit.add :form, "venue_page_fields", :before => "form_bottom"
   end
   

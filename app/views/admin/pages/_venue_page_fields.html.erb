@@ -7,7 +7,7 @@ this, but it's ugly!
  %>
 <% @page = Page.find(@page.id) # TODO: remove this! %>
 
-<fieldset id="venue_fields">
+<fieldset id="venue_fields" <%= %Q{class="hide"} unless @page.is_venue? %>>
   <legend>Venue information</legend>
   <ul class="column first-half">
     <li class="first">
