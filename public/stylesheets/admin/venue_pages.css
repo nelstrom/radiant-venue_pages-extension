@@ -37,6 +37,9 @@ fieldset#venue_fields legend{
 #venue_fields ul.column li.first{
   border-top-style: none;
 }
+#venue_fields ul.column li.bottom-border{
+  border-bottom: 1px solid #DFD3C3;
+}
 
 #venue_fields label{
   float: left;

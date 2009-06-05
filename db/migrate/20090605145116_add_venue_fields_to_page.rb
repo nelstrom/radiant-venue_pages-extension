@@ -1,6 +1,5 @@
 class AddVenueFieldsToPage < ActiveRecord::Migration
   def self.up
-    add_column :pages, :show_map, :boolean
     add_column :pages, :lat, :string
     add_column :pages, :lng, :string
     add_column :pages, :street_address, :string
@@ -18,6 +17,5 @@ class AddVenueFieldsToPage < ActiveRecord::Migration
     remove_column :pages, :street_address
     remove_column :pages, :lng
     remove_column :pages, :lat
-    remove_column :pages, :show_map
   end
 end
