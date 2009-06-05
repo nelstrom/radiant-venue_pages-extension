@@ -26,7 +26,7 @@ namespace :radiant do
               end
             end
 
-            venue.class_name = "VenuePag"
+            venue.class_name = "VenuePage"
             if venue.save
               puts "updated #{venue.title}"
             end
