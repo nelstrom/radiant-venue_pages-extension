@@ -1,0 +1,51 @@
+fieldset#venue_fields{
+  background-color: #fff;
+  border: 1px solid #CDC295;
+  margin-top: 56px;
+}
+fieldset#venue_fields legend{
+  font-weight: bold;
+  padding: 6px 13px 4px;
+  height: 18px;
+  margin-top: -28px;
+  background-color: #fff;
+  border: 1px solid #CDC295;
+  border-bottom-style: none;
+}
+#venue_fields ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#venue_fields ul.column{
+  float: left;
+  width: 48%;
+}
+#venue_fields ul.first-half  li { padding-right: 5%;}
+#venue_fields ul.second-half li { padding-left: 5%;}
+
+#venue_fields ul.column li{
+  float: left;
+  width: 100%;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-top: 1px solid #DFD3C3;
+}
+#venue_fields ul.column li.first{
+  border-top-style: none;
+}
+
+#venue_fields label{
+  float: left;
+  width: 18%;
+  padding-top: 4px;
+}
+#content #venue_fields label{ font-weight: normal; }
+#venue_fields input{
+  font-size: 14px;
+  float: right;
+  width: 80%;
+}
+#venue_fields input.checkbox{
+  float: left;
+}

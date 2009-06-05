@@ -1,3 +1,5 @@
+<% include_stylesheet 'admin/venue_pages' %>
+
 <%# @page is missing Venue fields - as though loaded with 
 Page.find(id, :select => "title,slug...") where select does
 not include Venue fields. Reassinging @page seems to get round
@@ -5,42 +7,43 @@ this, but it's ugly!
  %>
 <% @page = Page.find(@page.id) # TODO: remove this! %>
 
-<fieldset>
+<fieldset id="venue_fields">
+  <legend>Venue information</legend>
   <ul class="column first-half">
-    <li>
-      <label for="page_street_address">Street:</label>
+    <li class="first">
+      <label for="page_street_address">Street</label>
       <%= text_field :page, :street_address %>
     </li>
     <li>
-      <label for="page_city">City:</label>
+      <label for="page_city">City</label>
       <%= text_field :page, :city %>
     </li>
     <li>
-      <label for="page_postcode">Postcode:</label>
+      <label for="page_postcode">Postcode</label>
       <%= text_field :page, :postcode %>
     </li>
     <li>
-      <label for="page_phone">Phone:</label>
+      <label for="page_phone">Phone</label>
       <%= text_field :page, :phone %>
     </li>
   </ul>
   
   <ul class="column second-half">
-    <li>
-      <label for="page_venue_url">Website:</label>
+    <li class="first">
+      <label for="page_venue_url">Website</label>
       <%= text_field :page, :venue_url %>
     </li>
     <li>
-      <label for="page_lat">Latitude:</label>
+      <label for="page_lat">Latitude</label>
       <%= text_field :page, :lat %>
     </li>
     <li>
-      <label for="page_lng">Longitude:</label>
+      <label for="page_lng">Longitude</label>
       <%= text_field :page, :lng %>
     </li>
     <li>
-      <label for="page_show_map">Show map:</label>
-      <%= check_box :page, :show_map %>
+      <label for="page_show_map">Show map</label>
+      <%= check_box :page, :show_map, :class => "checkbox" %>
     </li>
   </ul>
 </fieldset>
