@@ -22,7 +22,7 @@ namespace :radiant do
               
               if part = venue.part(part_name)
                 venue.send("#{field_name}=", part.content)
-                part.destroy
+                # part.destroy
               end
             end
 

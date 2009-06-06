@@ -5,7 +5,9 @@ Page.find(id, :select => "title,slug...") where select does
 not include Venue fields. Reassinging @page seems to get round
 this, but it's ugly!
  %>
-<% @page = Page.find(@page.id) # TODO: remove this! %>
+<% unless @page.new_record? %>
+  <% @page = Page.find(@page.id) # TODO: remove this! %>
+<% end %>
 
 <fieldset id="venue_fields" <%= %Q{class="hide"} unless @page.is_venue? %>>
   <legend>Venue information</legend>
