@@ -51,5 +51,15 @@ module PageExtensions
     end
 
   end
+  
+  desc "Show contents only if the current venue is to be omitted from the map"
+  tag "venue:if_hidden_from_map" do |tag|
+    tag.expand if tag.locals.page.hide_from_map
+  end
+
+  desc "Show contents only if the current venue is to be shown on the map"
+  tag "venue:if_show_on_map" do |tag|
+    tag.expand unless tag.locals.page.hide_from_map
+  end
 
 end

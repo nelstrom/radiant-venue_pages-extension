@@ -15,6 +15,16 @@ fieldset#venue_fields legend{
   border: 1px solid #CDC295;
   border-bottom-style: none;
 }
+#venue_fields p.info{
+  clear: both;
+  float: left;
+  width: 40%;
+  margin-left: 50%;
+  margin-top: 0.5em;
+  color: #676767;
+  font-size: 92%;
+  font-style: italic;
+}
 #venue_fields ul{
   margin: 0;
   padding: 0;
@@ -43,14 +53,14 @@ fieldset#venue_fields legend{
 
 #venue_fields label{
   float: left;
-  width: 18%;
+  width: 25%;
   padding-top: 4px;
 }
 #content #venue_fields label{ font-weight: normal; }
 #venue_fields input{
   font-size: 14px;
   float: right;
-  width: 80%;
+  width: 72%;
 }
 #venue_fields input.checkbox{
   float: left;

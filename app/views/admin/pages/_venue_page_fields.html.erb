@@ -39,9 +39,14 @@ this, but it's ugly!
       <label for="page_lat">Latitude</label>
       <%= text_field :page, :lat %>
     </li>
-    <li class="bottom-border">
+    <li>
       <label for="page_lng">Longitude</label>
       <%= text_field :page, :lng %>
     </li>
+  <li>
+    <label for="page_hide_from_map">Omit from map</label>
+    <%= check_box :page, :hide_from_map, :class => "checkbox" %>
+  </li>
   </ul>
+  <p class="info">Find latitude and longitude values with <a href="http://www.getlatlon.com/?q=EH12LD,uk" title="Get Lat Lon - find the latitude and longitude of a point on a map">getlatlng</a>.</p>
 </fieldset>
